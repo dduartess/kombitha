@@ -228,7 +228,7 @@ cite p{
 }
 
 
-@media (max-width: 600px){
+@media (max-width: 800px){
 
     .background-principal{
         width: 100%;
@@ -319,13 +319,13 @@ cite p{
 
 @media (max-width: 400px){
     .background-principal{
-        width: 80vh;
+        width: 100vh;
         background-size: contain;
     }
 
     .main-bg{
         height: 150vh;
-        width: 80vh;
+        width: 100vh;
     }
 
     .flex-section-one{
