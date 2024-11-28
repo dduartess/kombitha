@@ -1,0 +1,406 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* ESPAÇO ENTRE OS LADOS DO MENU*/
+.espaco{ 
+    padding-left: 25rem;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+    color: black;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.menu nav ul li a{
+    display: block;
+    color: black;
+    position: relative;
+}
+
+.menu nav ul li a::after{
+    content: ' ';
+    position: absolute;
+    bottom: 0.1rem;
+    left: 50%;
+    width: 0%;
+    height: 0.15rem;
+    background: black;
+    transition: all 300ms ease-in-out;
+}
+
+.menu nav ul li a:hover:after{
+    width: 50%;
+    left: 25%;
+}
+
+.menu-content {
+    display: flex; /* Flexbox para alinhar os itens */
+    align-items: center; /* Para centralizar verticalmente os itens */
+}
+
+.menu-content ul {
+    display: flex; /* Faz com que a lista se comporte como um flex container */
+}
+
+
+.menu-content li a {
+    color: black;
+    padding: 0.5rem 1rem; /* Espaçamento interno para links */
+    transition: background 0.3s; /* Adiciona uma transição suave para o hover */
+}
+
+/* backgrounds*/
+.background-principal{
+    background-image: url(/assets/img/dragon-scales.svg);
+    background-size: contain;
+    height: 100vh;
+}
+
+/* LOGO DO MENU */
+
+.div-logo{
+    display: flex;
+    max-width: 25rem;
+    max-height: 1rem;
+    padding-right: 7rem;
+}
+
+.div-logo h1{
+    align-self: center;
+}
+
+.div-logo img{
+    max-height:9rem;
+    align-self: center;
+}
+
+
+/* PRIMEIRA PAGINA*/
+
+.flex-section-one{
+    padding-top: 10rem;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+}
+
+.container-principal{
+    color: black;
+    width: 800px;
+}
+
+.titulo-container h2{
+    font-size: 5rem;
+    line-height: 5.5rem;
+}
+
+.text-container{
+    width: 800px;
+    padding-top: 1rem;
+}
+
+.text-container p{
+    font-size: 1.6rem;
+}
+
+.li-descricao{
+    padding-top: 1rem;
+    width: 800px;
+}
+
+.li-descricao p{
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+.cont-imagem img{
+    position: relative;
+}
+
+/* TITULO DA SEGUNDA PAGINA*/
+.main-content{
+    padding-top: 4rem;
+    padding-left: 2.5rem;
+    width: 800px;
+}
+
+.main-content h2{
+    font-size: 3rem;
+    line-height: 3.2rem;
+}
+
+.main-bg{
+    background-image: url(/assets/img/Shiny\ Overlay.svg);
+    background-size:cover;
+    height: 100vh;
+}
+
+
+/* BASE PARA FOTOS */
+
+.img-poemas{
+    background: rgba(255, 255, 255, 0.1); /* Fundo branco semi-transparente */
+    backdrop-filter: blur(10px); /* Aplica um desfoque no fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar efeito de profundidade */
+    max-width: 200px;
+    max-height: 200px;
+    margin-top: 2rem;
+    transition: transform 300ms ease-in-out; /* Codigo animação da foto */
+    float: left;
+    margin-right: 5rem;
+}
+
+.img-poemas:hover {
+    transform:scale(1.1) /* Aumenta a imagem ao passar o mouse */
+}
+
+.image-container {
+    display: flex; /* Usando flexbox para alinhar os itens em linha */
+    margin-top: 10rem; /* Margem superior para o contêiner */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+}
+
+
+/* CLASSE POEMA */
+
+.titulo-top-page{
+    padding-top: 10rem;
+    padding-left: 10rem;
+}
+.titulo-top-page h2{
+    font-size: 2.5rem;
+}
+
+.poema{
+    text-align: center;
+    padding-top: 1rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+
+.titulo-poema{
+    padding-top: 5rem;
+}
+
+cite p{
+    font-size: 1rem;
+    text-align: end;
+    padding-right: 5rem;
+}
+
+
+
+
+/* audio */
+.audio{
+    text-align: center;
+    padding-top: 5rem;
+    padding-left: 4rem;
+}
+
+
+@media (max-width: 600px){
+
+    .background-principal{
+        width: 100%;
+    }
+
+    .main-bg{
+        height: 150vh;
+    }
+
+    .flex-section-one{
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center;     /* Centraliza verticalmente */
+        display: inline;
+    }
+
+    .container-principal{
+        padding-top: 8rem;
+        padding-left: 2rem;
+        max-width: 400px;
+
+    }
+
+    .titulo-container h2{
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+    }
+    .text-container{
+        width: 400px;
+        padding-top: 1rem;
+    }
+    
+    .text-container p{
+        font-size: 1rem;
+    }
+    
+    .li-descricao{
+        padding-top: 1rem;
+        width: 400px;
+    }
+    
+    .li-descricao p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .cont-imagem{
+        padding-top: 2rem;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center;     /* Centraliza verticalmente */
+        
+    }
+    .cont-imagem img{
+        width: 80%;
+        padding-left: 2rem;
+    }
+
+    /* segunda tela*/
+
+    .main-content{
+        padding-top: 10rem;
+        padding-left: 1rem;
+        width: 400px;
+    }
+    
+    .main-content h2{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    /* imagens */
+
+    .image-container{
+        display: inline;
+        
+    }
+
+    .img-poemas{
+        width: 150px;
+       margin-left: 8rem;
+       margin-top: 2rem;
+    }
+
+
+    .menu{
+        opacity: 0;
+    }
+
+}
+
+@media (max-width: 400px){
+    .background-principal{
+        width: 80vh;
+    }
+
+    .main-bg{
+        height: 150vh;
+        width: 80vh;
+    }
+
+    .flex-section-one{
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center;     /* Centraliza verticalmente */
+        display: inline;
+    }
+
+    .container-principal{
+        padding-top: 8rem;
+        padding-left: 2rem;
+        max-width: 400px;
+
+    }
+
+    .titulo-container h2{
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+    }
+    .text-container{
+        width: 400px;
+        padding-top: 1rem;
+    }
+    
+    .text-container p{
+        font-size: 1rem;
+    }
+    
+    .li-descricao{
+        padding-top: 1rem;
+        width: 400px;
+    }
+    
+    .li-descricao p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .cont-imagem{
+        padding-top: 2rem;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center;     /* Centraliza verticalmente */
+        
+    }
+    .cont-imagem img{
+        width: 80%;
+        padding-left: 2rem;
+    }
+
+    /* segunda tela*/
+
+    .main-content{
+        padding-top: 10rem;
+        padding-left: 1rem;
+        width: 400px;
+    }
+    
+    .main-content h2{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    /* imagens */
+
+    .image-container{
+        display: inline;
+        
+    }
+
+    .img-poemas{
+        width: 150px;
+       margin-left: 8rem;
+       margin-top: 2rem;
+    }
+
+
+    .menu{
+        opacity: 0;
+    }
+}
