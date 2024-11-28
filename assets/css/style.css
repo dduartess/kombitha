@@ -320,6 +320,7 @@ cite p{
 @media (max-width: 400px){
     .background-principal{
         width: 80vh;
+        background-size: contain;
     }
 
     .main-bg{
@@ -328,24 +329,21 @@ cite p{
     }
 
     .flex-section-one{
-        justify-content: center; /* Centraliza horizontalmente */
-        align-items: center;     /* Centraliza verticalmente */
         display: inline;
     }
 
     .container-principal{
         padding-top: 8rem;
         padding-left: 2rem;
-        max-width: 400px;
-
+        max-width: 300px;
     }
 
     .titulo-container h2{
-        font-size: 2.5rem;
+        font-size: 2.1rem;
         line-height: 2.8rem;
     }
     .text-container{
-        width: 400px;
+        width: 300px;
         padding-top: 1rem;
     }
     
@@ -355,7 +353,7 @@ cite p{
     
     .li-descricao{
         padding-top: 1rem;
-        width: 400px;
+        width: 300px;
     }
     
     .li-descricao p{
@@ -369,7 +367,7 @@ cite p{
         
     }
     .cont-imagem img{
-        width: 80%;
+        width: 60%;
         padding-left: 2rem;
     }
 
@@ -378,12 +376,12 @@ cite p{
     .main-content{
         padding-top: 10rem;
         padding-left: 1rem;
-        width: 400px;
+        width: 300px;
     }
     
     .main-content h2{
-        font-size: 2rem;
-        line-height: 2.5rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
     }
 
     /* imagens */
@@ -395,7 +393,7 @@ cite p{
 
     .img-poemas{
         width: 150px;
-       margin-left: 8rem;
+       margin-left: 5rem;
        margin-top: 2rem;
     }
 
