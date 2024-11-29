@@ -317,7 +317,8 @@ cite p{
 
 }
 
-@media (max-width: 400px){
+@media (max-width: 450px){
+    
     .background-principal{
         width: 100vh;
         background-size: contain;
@@ -335,7 +336,7 @@ cite p{
     .container-principal{
         padding-top: 8rem;
         padding-left: 2rem;
-        max-width: 300px;
+        max-width: 280px;
     }
 
     .titulo-container h2{
@@ -343,7 +344,7 @@ cite p{
         line-height: 2.8rem;
     }
     .text-container{
-        width: 300px;
+        width: 280px;
         padding-top: 1rem;
     }
     
@@ -353,7 +354,7 @@ cite p{
     
     .li-descricao{
         padding-top: 1rem;
-        width: 300px;
+        width: 250px;
     }
     
     .li-descricao p{
@@ -367,16 +368,16 @@ cite p{
         
     }
     .cont-imagem img{
-        width: 60%;
+        width: 50%;
         padding-left: 2rem;
     }
 
     /* segunda tela*/
 
     .main-content{
-        padding-top: 10rem;
+        padding-top: 12rem;
         padding-left: 1rem;
-        width: 300px;
+        width: 250px;
     }
     
     .main-content h2{
