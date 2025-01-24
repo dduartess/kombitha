@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kombitha</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/js/scripts.js">
 
 </head>
 
 
 <body>
-    <aside class="menu menu-content ">
-        <div class="menu menu-content">
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button" aria-pressed="true">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
+    
+    <aside class="menu">
+        <div class="menu-content">
             <div class="div-logo">
                 <img src="/assets/img/logo.png" alt="kombi">
                 <h1>Kombitha</h1>
@@ -19,17 +23,15 @@
             <div class="espaco"></div>
             <nav>
                 <ul>
-                    <li><a href="#HOME">Home</a></li>
-                    <li><a href="#POEMAS">Poemas</a></li>
-                    <li><a href="#">Livros</a></li>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li class="menu-item"><a href="#HOME">Home</a></li>
+                    <li class="menu-item"><a href="#POEMAS">Poemas</a></li>
+                    <li class="menu-item"><a href="#">Livros</a></li>
+                    <li class="menu-item"><a href="#">Sobre Nós</a></li>
+                    <li class="menu-item"><a href="#">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </aside>
-
-
     
     <section class="background-principal" id="HOME">
         <div class="flex-section-one">
@@ -68,17 +70,35 @@
         </div>
         <div class="image-container">
             <div>
-                <a href="/siriema.html"><img class="img-poemas" src="assets\img\siriema.png" alt="img_siriema"></a>
+                <a href="/siriema.html"><img class="img-poemas" src="assets/img/ilustracoes/siriema.png" alt="img_siriema"></a>
             </div>
 
             <div>
-                <a href="/inhambu.html"><img class="img-poemas" src="assets\img\inhambu.png" alt="img_inhambu"></a>
+                <a href="/inhambu.html"><img class="img-poemas" src="assets/img/ilustracoes/inhambu.png" alt="img_inhambu"></a>
+            </div>
+            <div>
+                <a href="/AraraCanide.html"><img class="img-poemas" src="assets/img/ilustracoes/arara.png" alt="img_arara_canide"></a>
+            </div>
+            <div>
+                <a href="/RolinhaDoPlanalto.html"><img class="img-poemas" src="assets/img/ilustracoes/Rolinha.png" img_rolinhaDoPlanalto"></a>
             </div>
         </div>
     </section>
 
 
-
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuItems = document.querySelectorAll('.menu-item'); // Seleciona todos os itens de menu
+        const closeMenuCheckbox = document.getElementById('close-menu'); // Seleciona o checkbox do menu
+    
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Desmarcar o checkbox para fechar o menu
+                closeMenuCheckbox.checked = false;
+            });
+        });
+    });
+    </script>
 </body>
 
 </html>

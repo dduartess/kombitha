@@ -2,8 +2,13 @@
     padding: 0;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
 }
 
+html, body {
+    height: 100%; /* Faz com que o corpo da página ocupe toda a altura da tela */
+    margin: 0; /* Remove margens padrões */
+}
 
 a {
     text-decoration: none;
@@ -75,8 +80,7 @@ html{
 /* backgrounds*/
 .background-principal{
     background-image: url(/assets/img/dragon-scales.svg);
-    background-size: contain;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* LOGO DO MENU */
@@ -154,8 +158,16 @@ html{
 
 .main-bg{
     background-image: url(/assets/img/Shiny\ Overlay.svg);
-    background-size:cover;
-    height: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center center; /* Centraliza a imagem */
+    width: 100%;
+}
+
+.bg-poemas{
+    background-image: url(/assets/img/Shiny\ Overlay.svg);
+    min-height: 100vh;
+    background-size: cover;
 }
 
 
@@ -165,10 +177,10 @@ html{
     background: rgba(255, 255, 255, 0.1); /* Fundo branco semi-transparente */
     backdrop-filter: blur(10px); /* Aplica um desfoque no fundo */
     border-radius: 10px; /* Bordas arredondadas */
-    padding: 20px; /* Espaçamento interno */
+    /*padding: 20px; /* Espaçamento interno */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar efeito de profundidade */
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 250px;
+    max-height: 250px;
     margin-top: 2rem;
     transition: transform 300ms ease-in-out; /* Codigo animação da foto */
     float: left;
@@ -181,20 +193,18 @@ html{
 
 .image-container {
     display: flex; /* Usando flexbox para alinhar os itens em linha */
-    margin-top: 10rem; /* Margem superior para o contêiner */
+    margin-top: 5rem; /* Margem superior para o contêiner */
     justify-content: center; /* Centraliza as imagens horizontalmente */
     align-items: center;     /* Centraliza verticalmente */
+    padding-bottom: 10rem;
 }
 
 
 /* CLASSE POEMA */
 
 .titulo-top-page{
-    padding-top: 10rem;
+    padding-top: 5rem;
     padding-left: 10rem;
-}
-.titulo-top-page h2{
-    font-size: 2.5rem;
 }
 
 .poema{
@@ -202,10 +212,15 @@ html{
     padding-top: 1rem;
 }
 
-h3{
-    font-size: 3rem;
+.poema2{
+    text-align: center;
+    padding-top: 1rem;
 }
 
+.titulo-top-page h3{
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
 
 .titulo-poema{
     padding-top: 5rem;
@@ -213,31 +228,139 @@ h3{
 
 cite p{
     font-size: 1rem;
+    padding-top: 1rem;
     text-align: end;
-    padding-right: 5rem;
+    color: rgba(0, 0, 0, 0.6)
 }
 
+.corpo-poema{
+    width: 400px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 
 /* audio */
 .audio{
     text-align: center;
-    padding-top: 5rem;
-    padding-left: 4rem;
+    padding-top: 8rem;
+}
+
+.close-menu{
+    display: none;
 }
 
 
-@media (max-width: 600px){
+
+@media (max-width: 1024px){
 
     .background-principal{
-        width: 100%;
-        height: 100%;
-        background-size: contain;
+        min-height: 100vh; /* Garantir que a altura mínima seja 100% da altura da tela */
+        min-width: 100%; /* Garante que o fundo cubra a largura da tela */
     }
 
     .main-bg{
-        height: 100vh;
+        background-size: cover; /* Garante que o fundo cubra a tela */
+        min-height: 100vh; /* Garante que o fundo cubra a altura da tela */
+    }
+
+    .flex-section-one{
+        justify-content: center;
+        display: inline;
+    }
+
+    .container-principal{
+        padding-top: 8rem;
+        padding-left: 2rem;
+        max-width: 600px;
+
+    }
+
+    .titulo-container h2{
+        font-size: 4rem;
+        line-height: 3.7rem;
+    }
+    .text-container{
+        max-width: 25rem;
+        padding-top: 1rem;
+    }
+    
+    .text-container p{
+        font-size: 1rem;
+    }
+    
+    .li-descricao{
+        padding-top: 1rem;
+        max-width: 400px;
+    }
+    
+    .li-descricao p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .cont-imagem{
+        padding-top: 2rem;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center;     /* Centraliza verticalmente */
+        
+    }
+    .cont-imagem img{
+        max-width: 80%;
+        padding-left: 2rem;
+    }
+
+    /* segunda tela*/
+
+    .main-content{
+        padding-left: 1rem;
+        max-width: 560px;
+    }
+    
+    .main-content h2{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    /* imagens */
+
+    .image-container{
+        display: inline;
+        
+    }
+
+    .img-poemas{
+       max-width: 250px;
+       margin-left: 19rem;
+       margin-top: 2rem;
+    }
+
+
+    .menu{
+        width: 100%;
+    }
+    
+    .espaco{
+        padding: 0;
+    }
+
+    .menu-content{
+        height: 5%;
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 630px){
+
+    .background-principal{
+        min-height: 100vh; 
+        min-width: 100%; 
+    }
+
+    .main-bg{
+        background-size: cover; /* Garante que o fundo cubra a tela */
+        min-height: 100vh; /* Garante que o fundo cubra a altura da tela */
     }
 
     .flex-section-one{
@@ -258,7 +381,7 @@ cite p{
         line-height: 2.8rem;
     }
     .text-container{
-        width: 400px;
+        max-width: 25rem;
         padding-top: 1rem;
     }
     
@@ -268,7 +391,7 @@ cite p{
     
     .li-descricao{
         padding-top: 1rem;
-        width: 400px;
+        max-width: 400px;
     }
     
     .li-descricao p{
@@ -282,16 +405,16 @@ cite p{
         
     }
     .cont-imagem img{
-        width: 80%;
+        max-width: 80%;
         padding-left: 2rem;
     }
 
     /* segunda tela*/
 
     .main-content{
-        padding-top: 10rem;
+        padding-top: rem;
         padding-left: 1rem;
-        width: 400px;
+        max-width: 400px;
     }
     
     .main-content h2{
@@ -307,33 +430,112 @@ cite p{
     }
 
     .img-poemas{
-     width: 150px;
+       max-width: 150px;
        margin-left: 8rem;
        margin-top: 2rem;
     }
 
 
-    .menu{
-        opacity: 0;
-    }
-
+  /* A primeira parte garante que o menu seja oculto inicialmente */
+.menu {
+    display: none; /* Inicialmente, o menu estará escondido */
+    position: fixed; /* Fixa o menu na tela */
+    top: 0;
+    left: 0;
+    width: 100%; /* O menu ocupa a largura inteira da tela */
+    height: 100vh; /* A altura do menu é 100% da altura da tela */
+    z-index: 1000; /* Garante que o menu apareça acima de outros elementos */
 }
+
+/* Quando o checkbox está marcado, o menu se torna visível */
+.close-menu:checked ~ .menu {
+    display: block; /* Exibe o menu */
+}
+
+/* A estrutura interna do menu */
+.menu-content {
+    display: flex; /* Usamos flexbox para alinhar os itens */
+    flex-direction: column; /* Faz os itens ficarem um abaixo do outro */
+    justify-content: center; /* Alinha verticalmente no centro */
+    align-items: center; /* Alinha os itens horizontalmente no centro */
+    height: 100%; /* Garantimos que o menu ocupe toda a altura */
+    color: black; /* Cor do texto no menu */
+}
+
+.menu-content ul{
+    display: flex; /* Usamos flexbox para alinhar os itens */
+    flex-direction: column; /* Faz os itens ficarem um abaixo do outro */
+    justify-content: center; /* Alinha verticalmente no centro */
+    align-items: center; /* Alinha os itens horizontalmente no centro */
+    height: 100%; /* Garantimos que o menu ocupe toda a altura */
+    color: black; /* Cor do texto no menu */
+}
+
+/* Estilos do ícone de abrir/fechar o menu */
+.close-menu-label::after {
+    content: '☰'; /* Ícone de menu */
+    position: fixed;
+    z-index: 100001; /* Fica acima do menu */
+    top: 2rem;
+    right: 3rem;
+    color: black;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/* Quando o menu está aberto, o ícone muda para "×" */
+.close-menu:checked ~ .close-menu-label::after {
+    content: '×'; /* Ícone de fechar */
+}
+
+/* Estilo da lista de navegação */
+.menu-content nav ul {
+    list-style-type: none; /* Remove o marcador (bolinha) */
+    padding: 0;
+}
+
+.menu-content nav ul li {
+    margin: 1rem 0; /* Espaçamento entre os itens */
+}
+
+.menu-content nav ul li a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: black; /* Cor dos links */
+    font-size: 1.5rem; /* Tamanho maior para os links */
+    transition: color 0.3s ease; /* Transição suave para mudança de cor */
+}
+
+/* Mudando a cor do link quando o mouse passa por cima */
+.menu-content nav ul li a:hover {
+    color: green; /* Cor de destaque ao passar o mouse */
+}
+
+
+
 
 @media (max-width: 450px){
 
     .background-principal{
         width: 100%;
-        background-size: contain;
+        -webkit-transform: translateZ(0); /* Força renderização via GPU */
+        transform: translateZ(0);
+        backface-visibility: hidden; /* Evita problemas de renderização */
     }
 
     .main-bg{
-        height: 100vh;
-        
+        min-height: 100vh;
+        width: 100%;
+        background-size: cover , cover;
+        background-repeat: no-repeat, no-repeat;  /* Impede que as imagens se repitam */
+        background-position: center center, center center;  /* Centraliza ambas as imagens */
     }
 
     .flex-section-one{
-        justify-content: center; /* Centraliza horizontalmente */
-        align-items: center;     /* Centraliza verticalmente */
+        justify-content: center; 
+        align-items: center;     
         display: inline;
     }
 
@@ -368,8 +570,8 @@ cite p{
     }
     .cont-imagem{
         padding-top: 2rem;
-        justify-content: center; /* Centraliza horizontalmente */
-        align-items: center;     /* Centraliza verticalmente */
+        justify-content: center; 
+        align-items: center;     
         
     }
     .cont-imagem img{
@@ -377,20 +579,18 @@ cite p{
         padding-left: 2rem;
     }
 
-    /* segunda tela*/
-
     .main-content{
         padding-top: 1rem;
         padding-left: 1rem;
-        width: 380px;
+        width: 350px;
     }
     
     .main-content h2{
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         line-height: 2.5rem;
     }
 
-    /* imagens */
+
 
     .image-container{
         display: inline;
@@ -398,40 +598,56 @@ cite p{
     }
 
     .img-poemas{
-     width: 150px;
-       margin-left: 7rem;
+     width: 130px;
+       margin-left: 8rem;
        margin-top: 2rem;
     }
 
 
     .menu{
-        opacity: 0;
+        bottom: 0;
     }
 
+    * {
+        box-sizing: border-box;
+    }
+
+    .corpo-poema{
+        width: 250px;
+        margin-right: 5rem;
+    }
+    
+    .audio{
+        margin-left: auto;
+        margin-right: 1rem;
+    }
 }
 
 
-@media (max-width: 400px){
+@media (max-width: 410px){
 
     .background-principal{
-        width: 100%;
-        background-size: contain;
+        max-width: 100%;
     }
 
     .main-bg{
-        height: 100vh;
+        min-height: 100vh;
+        width: 100%;
+        background-size: cover , cover;
+        background-repeat: no-repeat, no-repeat;  /* Impede que as imagens se repitam */
+        background-position: center center, center center;  /* Centraliza ambas as imagens */
     }
 
     .flex-section-one{
-        justify-content: center; /* Centraliza horizontalmente */
-        align-items: center;     /* Centraliza verticalmente */
+        justify-content: center; 
+        align-items: center;     
         display: inline;
     }
 
     .container-principal{
         padding-top: 8rem;
         padding-left: 2rem;
-        max-width: 350px;
+        max-width: 310px;
     }
 
     .titulo-container h2{
@@ -439,7 +655,7 @@ cite p{
         line-height: 2.8rem;
     }
     .text-container{
-        width: 300px;
+        max-width: 300px;
         padding-top: 1rem;
         
     }
@@ -450,7 +666,7 @@ cite p{
     
     .li-descricao{
         padding-top: 1rem;
-        width: 300px;
+        max-width: 300px;
     }
     
     .li-descricao p{
@@ -459,44 +675,117 @@ cite p{
     }
     .cont-imagem{
         padding-top: 2rem;
-        justify-content: center; /* Centraliza horizontalmente */
-        align-items: center;     /* Centraliza verticalmente */
+        justify-content: center; 
+        align-items: center;     
         
     }
     .cont-imagem img{
-        width: 85%;
+        max-width: 70%;
         padding-left: 2rem;
     }
 
-    /* segunda tela*/
+
 
     .main-content{
         padding-top: 1rem;
         padding-left: 1rem;
-        width: 320px;
+        max-width: 320px;
     }
     
     .main-content h2{
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         line-height: 2.5rem;
     }
 
-    /* imagens */
+  
 
     .image-container{
         display: inline;
-        
     }
 
     .img-poemas{
-     width: 150px;
+       max-width: 150px;
        margin-left: 5rem;
        margin-top: 2rem;
     }
 
+} 
 
-    .menu{
-        opacity: 0;
+@media (max-width: 350px){
+
+    .background-principal{
+        max-width: 100%;
     }
 
+    .main-bg{
+        max-height: 100vh;
+        background-size: contain;
+    }
+
+    .flex-section-one{
+        justify-content: center; 
+        align-items: center;     
+        display: inline;
+    }
+
+    .container-principal{
+        padding-top: 8rem;
+        padding-left: 2rem;
+        max-width: 250px;
+    }
+
+    .titulo-container h2{
+        font-size: 1.5rem;
+        line-height: 2.8rem;
+    }
+    .text-container{
+        max-width: 250px;
+        padding-top: 1rem;
+        
+    }
+    
+    .text-container p{
+        font-size: 1rem;
+    }
+    
+    .li-descricao{
+        padding-top: 1rem;
+        max-width: 250px;
+    }
+    
+    .li-descricao p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .cont-imagem{
+        padding-top: 2rem;
+        justify-content: center; 
+        align-items: center;     
+        
+    }
+    .cont-imagem img{
+        max-width: 70%;
+        padding-left: 2rem;
+    }
+
+    .main-content{
+        padding-top: 1rem;
+        padding-left: 1rem;
+        max-width: 250px;
+    }
+    
+    .main-content h2{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .image-container{
+        display: inline;
+    }
+
+    .img-poemas{
+       max-width: 100px;
+       margin-top: 2rem;
+    }
+}
 }
